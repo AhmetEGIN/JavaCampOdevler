@@ -1,4 +1,4 @@
-package loopDemo;
+package LoopDemo;
 
 public class Main {
 

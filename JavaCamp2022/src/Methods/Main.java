@@ -27,6 +27,8 @@ public class Main {
 
 		}
 	}
+	
+	
 
 	public static void mesajVer(String message) {
 		System.out.println(message);
