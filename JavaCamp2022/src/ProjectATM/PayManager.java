@@ -6,14 +6,14 @@ public class PayManager {
 		_cardManager =cardManager;
 	}
 	
-	public void Withdrawal(Card card, int amount) {
-		_cardManager.UpdateForWithdrawal(card, amount);
+	public void withdrawal(Card card, int amount) {
+		_cardManager.updateForWithdrawal(card, amount);
 	}
-	public void Deposit(Card card, int amount) {
-		_cardManager.UpdateForDeposit(card, amount);
+	public void deposit(Card card, int amount) {
+		_cardManager.updateForDeposit(card, amount);
 	}
 	
-	public int BalanceInquiry(Card card) {
+	public int balanceInquiry(Card card) {
 		return card.getBalance();
 	}
 	

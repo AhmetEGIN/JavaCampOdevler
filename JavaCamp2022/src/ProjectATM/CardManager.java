@@ -16,22 +16,22 @@ public class CardManager {
 
 	}
 
-	public void Add(Card card) {
-		if (IsPasswordValid(card)) {
+	public void add(Card card) {
+		if (isPasswordValid(card)) {
 			cards.add(card);
 		} else {
 			System.out.println("Hata");
 		}
 	}
 
-	public void UpdateForWithdrawal(Card card, int amount) {
+	public void updateForWithdrawal(Card card, int amount) {
 		card.setBalance(card.getBalance() - amount);
 	}
-	public void UpdateForDeposit(Card card, int amount) {
+	public void updateForDeposit(Card card, int amount) {
 		card.setBalance(card.getBalance() + amount);
 	}
 
-	public Card GetCard(String userName, String password) {
+	public Card getCard(String userName, String password) {
 		for (Card _card : cards) {
 			// iki ifadenin referansýný karþýlaþtýrýken == kullanýlýr
 			// iki ifadenin deðerini yani içeriðini .equals(value) ile karþýlaþtýrabiliriz
@@ -42,7 +42,7 @@ public class CardManager {
 		return null;
 	}
 
-	private boolean IsPasswordValid(Card card) {
+	private boolean isPasswordValid(Card card) {
 		if (card.getPassword().length() < 5) {
 			System.out.println("Þifre uzunluðu 5 basamaktan fazla olmalýdýr");
 			return false;

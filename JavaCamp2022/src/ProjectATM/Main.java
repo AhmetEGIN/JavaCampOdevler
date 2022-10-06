@@ -18,7 +18,7 @@ public class Main {
 			userName = scan.nextLine();
 			System.out.println("Enter your password: ");
 			password = scan.nextLine();
-			Card _card = cardManager.GetCard(userName, password);
+			Card _card = cardManager.getCard(userName, password);
 			if (_card != null) {
 				System.out.println("Hello " + userName);
 				do {
@@ -27,22 +27,22 @@ public class Main {
 					select = scan.nextInt();
 					switch (select) {
 					case 1:
-						Sleep(1000);
-						System.out.println("Balance inquiry: " + payManager.BalanceInquiry(_card));
+						sleep(1000);
+						System.out.println("Balance inquiry: " + payManager.balanceInquiry(_card));
 						break;
 					case 2:
 						System.out.println("Amount:");
 						price = scan.nextInt();
-						payManager.Withdrawal(_card, price);
-						Sleep(2000);
-						System.out.println("Balance inquiry: " + payManager.BalanceInquiry(_card));
+						payManager.withdrawal(_card, price);
+						sleep(2000);
+						System.out.println("Balance inquiry: " + payManager.balanceInquiry(_card));
 						break;
 					case 3:
 						System.out.println("Amount:");
 						price = scan.nextInt();
-						payManager.Deposit(_card, price);
-						Sleep(2000);
-						System.out.println("Balance inquiry: " + payManager.BalanceInquiry(_card));
+						payManager.deposit(_card, price);
+						sleep(2000);
+						System.out.println("Balance inquiry: " + payManager.balanceInquiry(_card));
 						break;
 					default:
 						break;
@@ -62,7 +62,8 @@ public class Main {
 		}
 
 	}
-	private static void Sleep(int duration) {
+
+	private static void sleep(int duration) {
 		try {
 			Thread.sleep(duration);
 		} catch (InterruptedException ex) {
