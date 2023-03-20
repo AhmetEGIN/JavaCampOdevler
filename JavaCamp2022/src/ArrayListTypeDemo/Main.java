@@ -17,7 +17,7 @@ public class Main {
 		Collections.sort(sehirler);  // Sýralama Collections class'ý ile yapýlýr
 		for (String sehir: sehirler) {
 			System.out.println(sehir);
+			
 		}
-		
 	}
 }

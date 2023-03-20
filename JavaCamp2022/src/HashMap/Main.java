@@ -1,6 +1,8 @@
 package HashMap;
 
 import java.util.HashMap;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public class Main {
 
@@ -24,7 +26,24 @@ public class Main {
 			
 		}
 		
+		System.out.println(sozluk.values());
+		String itemToSearch = "Kitap";
+		System.out.println("-----");
 		
+		
+		for (Entry<String, String> item : sozluk.entrySet()) {
+			if (item.getValue().equals(itemToSearch)) {
+				System.out.println("Key :" + item.getKey() + " / Value :" + item.getValue());
+			}
+		}
+		
+		// containsKey -- verilen key'in map in içerisinde olup olmadýðýný kontrol eder. Boolean döndürür
+//		containsKey() ve containsValue() ile HashMap nesnesinde arama yapabiliriz. 
+//		Ýki metodda kendisine parametre verilen deðeri ilgili nesne içerisinde bulabilirse true aksi halde false döner.
+		// keySet sadece key'leri barýndýrýr
+		// Java.util.Map.Entry  -- Map(HashMap) içerisindeki key-value çiftleri ile ilgili metotlara sahiptir.
+		Set<Entry<String, String>> s = sozluk.entrySet();
+		System.out.println(s);
 		
 	}
 }
